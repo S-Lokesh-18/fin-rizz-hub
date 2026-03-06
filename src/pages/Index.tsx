@@ -1,4 +1,5 @@
 import { useState } from "react";
+import finrizzLogo from "@/assets/finrizz-logo.jpeg";
 import { motion } from "framer-motion";
 import { Wallet, Receipt, BarChart3, Shield } from "lucide-react";
 import BalanceCard from "@/components/BalanceCard";

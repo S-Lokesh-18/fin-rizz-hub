@@ -32,7 +32,7 @@ const TransactionDetail = ({ category, onBack }: TransactionDetailProps) => {
             <div>
               <h3 className="text-lg font-display font-semibold text-foreground">{category.name}</h3>
               <p className="text-sm text-muted-foreground">
-                {category.transactions.length} transactions · Total ${category.total.toLocaleString("en-US", { minimumFractionDigits: 2 })}
+                {category.transactions.length} transactions · Total ₹{category.total.toLocaleString("en-IN", { minimumFractionDigits: 2 })}
               </p>
             </div>
           </div>
@@ -51,7 +51,7 @@ const TransactionDetail = ({ category, onBack }: TransactionDetailProps) => {
                   <p className="text-xs text-muted-foreground">{tx.date}</p>
                 </div>
                 <span className="text-sm font-semibold text-destructive ml-3 whitespace-nowrap">
-                  -${tx.amount.toFixed(2)}
+                  -₹{tx.amount.toFixed(2)}
                 </span>
               </motion.div>
             ))}

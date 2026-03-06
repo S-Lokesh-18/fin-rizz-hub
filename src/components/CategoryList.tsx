@@ -34,7 +34,7 @@ const CategoryList = ({ categories, selectedId, onSelect, totalExpenses }: Categ
               <span className="text-sm font-medium text-foreground truncate">{cat.name}</span>
             </div>
             <p className="stat-value text-lg text-foreground">
-              ${cat.total.toLocaleString("en-US", { minimumFractionDigits: 2 })}
+              ₹{cat.total.toLocaleString("en-IN", { minimumFractionDigits: 2 })}
             </p>
             <div className="mt-2 w-full bg-muted rounded-full h-1.5 overflow-hidden">
               <motion.div

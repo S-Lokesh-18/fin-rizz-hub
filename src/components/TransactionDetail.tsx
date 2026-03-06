@@ -51,7 +51,7 @@ const TransactionDetail = ({ category, onBack }: TransactionDetailProps) => {
                   <p className="text-xs text-muted-foreground">{tx.date}</p>
                 </div>
                 <span className="text-sm font-semibold text-destructive ml-3 whitespace-nowrap">
-                  -${tx.amount.toFixed(2)}
+                  -₹{tx.amount.toFixed(2)}
                 </span>
               </motion.div>
             ))}

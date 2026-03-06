@@ -21,7 +21,7 @@ const BalanceCard = ({ label, amount, trend, trendValue, variant = "primary" }: 
       <p className="text-muted-foreground text-sm font-medium mb-1">{label}</p>
       <div className="flex items-end gap-3">
         <h2 className={`stat-value ${variant === "expense" ? "text-destructive" : "text-primary"}`}>
-          ${amount.toLocaleString("en-US", { minimumFractionDigits: 2 })}
+          ₹{amount.toLocaleString("en-IN", { minimumFractionDigits: 2 })}
         </h2>
         {trend && trendValue && (
           <span className={`flex items-center gap-1 text-xs font-medium pb-1 ${trend === "up" ? "text-primary" : "text-destructive"}`}>

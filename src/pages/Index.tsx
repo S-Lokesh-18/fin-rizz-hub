@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Wallet, Receipt } from "lucide-react";
+import { Wallet, Receipt, BarChart3, Shield } from "lucide-react";
 import BalanceCard from "@/components/BalanceCard";
-import CreditCardVisual from "@/components/CreditCardVisual";
+import MoneyTransfer from "@/components/MoneyTransfer";
 import CategoryList from "@/components/CategoryList";
 import TransactionDetail from "@/components/TransactionDetail";
+import ExpenseChart from "@/components/ExpenseChart";
+import ZombieSubscriptions from "@/components/ZombieSubscriptions";
+import SmartLoanWidget from "@/components/SmartLoanWidget";
 import { expenseCategories, totalBalance, totalExpenses } from "@/data/financeData";
 
 const Index = () => {
@@ -38,17 +41,9 @@ const Index = () => {
           </motion.div>
         </motion.header>
 
-        {/* Credit Card + Balance Row */}
+        {/* Money Transfer + Balance Row */}
         <div className="flex flex-col lg:flex-row gap-6 mb-8">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.1 }}
-            className="flex justify-center lg:justify-start"
-          >
-            <CreditCardVisual />
-          </motion.div>
-
+          <MoneyTransfer />
           <div className="flex flex-col sm:flex-row gap-4 flex-1">
             <BalanceCard
               label="Available Balance"
@@ -66,11 +61,17 @@ const Index = () => {
           </div>
         </div>
 
+        {/* Expense Chart */}
+        <div className="mb-8">
+          <ExpenseChart />
+        </div>
+
         {/* Expenses Section */}
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
+          className="mb-8"
         >
           <div className="flex items-center gap-2 mb-5">
             <Receipt className="w-5 h-5 text-primary" />
@@ -101,6 +102,12 @@ const Index = () => {
             )}
           </div>
         </motion.section>
+
+        {/* Zombie Subscriptions + Smart Loan */}
+        <div className="grid lg:grid-cols-2 gap-6 mb-8">
+          <ZombieSubscriptions />
+          <SmartLoanWidget />
+        </div>
       </div>
     </div>
   );

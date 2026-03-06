@@ -28,11 +28,14 @@ const Index = () => {
           animate={{ opacity: 1, y: 0 }}
           className="flex items-center justify-between mb-10"
         >
-          <div>
-            <h1 className="font-display text-3xl font-bold text-foreground tracking-tight">
-              Fin <span className="text-primary">Rizz</span>
-            </h1>
-            <p className="text-sm text-muted-foreground mt-0.5">Your money, your moves 💸</p>
+          <div className="flex items-center gap-3">
+            <img src={finrizzLogo} alt="Fin Rizz logo" className="w-10 h-10 rounded-full object-cover ring-2 ring-primary/30" />
+            <div>
+              <h1 className="font-display text-3xl font-bold text-foreground tracking-tight">
+                Fin <span className="text-primary">Rizz</span>
+              </h1>
+              <p className="text-sm text-muted-foreground mt-0.5">Your money, your moves 💸</p>
+            </div>
           </div>
           <motion.div
             whileHover={{ scale: 1.05 }}
